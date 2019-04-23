@@ -1,0 +1,29 @@
+package pages;
+
+import static libs.Actions.*;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class MainPage extends BasePage{
+
+//////--XPath--///////////////////////////////////////////////////////////////////////////////////////////
+
+  @FindBy(className = "login")
+  private WebElement buttonLogin;
+
+
+  ////////////////////////////////////////////////////////
+  public MainPage(WebDriver webDriver) {
+    super(webDriver);
+  }
+  //////////////////////////////////////////////////////////
+
+/////--Steps--///////////////////////////////////////////////////////////////////////////////////////////
+  public void openLoginModal(){
+    clickOnElement(buttonLogin);
+  }
+
+
+}
